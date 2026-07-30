@@ -2,16 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Plataforma Nacional de Seguridad | Caso de éxito GVI</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Caso de éxito de GVI Security Solutions en integración y centralización de sistemas de seguridad para una operación bancaria de alcance nacional."
+    content="Caso de éxito Santander: integración de soluciones de seguridad, monitoreo y centros de control por GVI Security Solutions."
   >
 
-  <!-- Fuentes corporativas -->
+  <title>Caso de éxito Santander | GVI Security Solutions</title>
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,24 +26,17 @@
 
   <style>
     :root {
-      --gvi-blue: #4A8DCB;
-      --gvi-light-blue: #85D5F5;
+      --gvi-blue: #4a8dcb;
+      --gvi-blue-dark: #24669f;
+      --gvi-blue-light: #85d5f5;
       --gvi-dark: #414141;
-      --gvi-gray: #B2B2B2;
-      --gvi-light-gray: #F4F7F9;
-      --gvi-white: #FFFFFF;
-      --gvi-border: #DDE5EA;
-
-      --font-heading: "Mukta Mahee", sans-serif;
-      --font-body: "Lato", sans-serif;
-
-      --content-width: 1180px;
-      --radius-small: 12px;
-      --radius-medium: 22px;
-      --radius-large: 36px;
-
-      --shadow-soft: 0 20px 55px rgba(65, 65, 65, 0.10);
-      --shadow-card: 0 12px 30px rgba(65, 65, 65, 0.08);
+      --gvi-gray: #b2b2b2;
+      --gvi-light-gray: #f4f7fa;
+      --gvi-white: #ffffff;
+      --gvi-border: #dfe7ed;
+      --gvi-shadow: 0 20px 50px rgba(30, 75, 110, 0.11);
+      --gvi-radius: 22px;
+      --gvi-container: 1180px;
     }
 
     * {
@@ -53,10 +50,11 @@
     }
 
     body {
-      color: var(--gvi-dark);
       background: var(--gvi-white);
-      font-family: var(--font-body);
-      line-height: 1.65;
+      color: var(--gvi-dark);
+      font-family: "Lato", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
     img {
@@ -70,884 +68,1087 @@
     }
 
     button,
-    a {
-      transition:
-        color 180ms ease,
-        background-color 180ms ease,
-        border-color 180ms ease,
-        transform 180ms ease;
+    input,
+    textarea,
+    select {
+      font: inherit;
     }
 
-    .container {
-      width: min(calc(100% - 40px), var(--content-width));
-      margin-inline: auto;
+    .gvi-container {
+      margin: 0 auto;
+      max-width: var(--gvi-container);
+      padding: 0 24px;
+      width: 100%;
     }
 
-    .eyebrow {
-      display: inline-flex;
+    .gvi-section {
+      padding: 96px 0;
+    }
+
+    .gvi-eyebrow {
       align-items: center;
-      gap: 10px;
-      color: var(--gvi-blue);
-      font-family: var(--font-heading);
-      font-size: 0.9rem;
+      color: var(--gvi-blue-dark);
+      display: inline-flex;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 0.82rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      gap: 10px;
+      letter-spacing: 0.13em;
+      margin-bottom: 16px;
       text-transform: uppercase;
     }
 
-    .eyebrow::before {
-      width: 32px;
-      height: 3px;
-      background: var(--gvi-light-blue);
-      border-radius: 99px;
+    .gvi-eyebrow::before {
+      background: var(--gvi-blue-light);
+      border-radius: 10px;
       content: "";
+      height: 4px;
+      width: 34px;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: var(--font-heading);
-      line-height: 1.08;
-    }
-
-    h1 {
-      max-width: 850px;
-      margin-top: 24px;
+    .gvi-section-title {
       color: var(--gvi-dark);
-      font-size: clamp(2.7rem, 6vw, 5.5rem);
-      font-weight: 600;
-      letter-spacing: -0.04em;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: clamp(2.1rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      margin-bottom: 22px;
     }
 
-    h2 {
-      margin-top: 14px;
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      font-weight: 600;
-      letter-spacing: -0.025em;
+    .gvi-section-description {
+      color: #66727c;
+      font-size: 1.07rem;
+      max-width: 720px;
     }
 
-    h3 {
-      font-size: 1.45rem;
-      font-weight: 600;
+    /* Header */
+
+    .gvi-header {
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(65, 65, 65, 0.08);
+      left: 0;
+      position: sticky;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
     }
 
-    p {
-      font-size: 1rem;
-    }
-
-    .lead {
-      max-width: 760px;
-      margin-top: 24px;
-      color: #5C5C5C;
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-    }
-
-    /* Navegación */
-
-    .site-header {
-      position: relative;
-      z-index: 10;
-      border-bottom: 1px solid rgba(178, 178, 178, 0.3);
-      background: rgba(255, 255, 255, 0.96);
-    }
-
-    .nav {
-      min-height: 78px;
-      display: flex;
+    .gvi-header__inner {
       align-items: center;
+      display: flex;
       justify-content: space-between;
+      min-height: 80px;
+    }
+
+    .gvi-header__logo {
+      align-items: center;
+      display: inline-flex;
+      width: 165px;
+    }
+
+    .gvi-header__logo img {
+      max-height: 48px;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .gvi-nav {
+      align-items: center;
+      display: flex;
       gap: 30px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      position: relative;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      color: var(--gvi-white);
-      background: var(--gvi-blue);
-      border-radius: 50%;
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .brand-mark::after {
-      width: 22px;
-      height: 58px;
-      position: absolute;
-      right: -5px;
-      background: var(--gvi-light-blue);
-      content: "";
-      transform: rotate(35deg);
-      opacity: 0.9;
-    }
-
-    .brand-mark span {
-      position: relative;
-      z-index: 1;
-    }
-
-    .brand-name {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .brand-name strong {
-      font-family: var(--font-heading);
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .brand-name small {
-      color: #777777;
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: #5A5A5A;
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .nav-links a:hover {
-      color: var(--gvi-blue);
-    }
-
-    .button {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 0 24px;
-      color: var(--gvi-white);
-      background: var(--gvi-blue);
-      border: 1px solid var(--gvi-blue);
-      border-radius: 999px;
-      font-weight: 700;
-    }
-
-    .button:hover {
-      background: #367DBE;
-      border-color: #367DBE;
-      transform: translateY(-2px);
-    }
-
-    .button.button-light {
+    .gvi-nav a {
       color: var(--gvi-dark);
-      background: var(--gvi-white);
-      border-color: var(--gvi-white);
+      font-size: 0.91rem;
+      font-weight: 700;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .button.button-light:hover {
+    .gvi-nav a:hover {
       color: var(--gvi-blue);
-      background: #F5FBFE;
+      transform: translateY(-1px);
+    }
+
+    .gvi-nav__cta {
+      background: var(--gvi-blue);
+      border-radius: 999px;
+      color: var(--gvi-white) !important;
+      padding: 11px 20px;
+    }
+
+    .gvi-nav__cta:hover {
+      background: var(--gvi-blue-dark);
     }
 
     /* Hero */
 
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 105px 0 80px;
+    .gvi-hero {
       background:
         radial-gradient(
-          circle at 86% 10%,
-          rgba(133, 213, 245, 0.28) 0,
-          rgba(133, 213, 245, 0.28) 130px,
-          transparent 131px
+          circle at 78% 18%,
+          rgba(133, 213, 245, 0.23),
+          transparent 26%
         ),
-        linear-gradient(135deg, #FFFFFF 0%, #FFFFFF 56%, #F3FAFD 100%);
+        linear-gradient(
+          125deg,
+          #153f62 0%,
+          #246da8 50%,
+          #4a8dcb 100%
+        );
+      color: var(--gvi-white);
+      min-height: 680px;
+      overflow: hidden;
+      position: relative;
     }
 
-    .hero::before {
-      width: 440px;
-      height: 440px;
-      position: absolute;
-      right: -230px;
-      bottom: -260px;
-      border: 80px solid rgba(74, 141, 203, 0.12);
+    .gvi-hero::before {
+      border: 1px solid rgba(255, 255, 255, 0.09);
       border-radius: 50%;
       content: "";
+      height: 560px;
+      position: absolute;
+      right: -150px;
+      top: -170px;
+      width: 560px;
     }
 
-    .hero-grid {
+    .gvi-hero::after {
+      background-image:
+        linear-gradient(
+          rgba(255, 255, 255, 0.035) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.035) 1px,
+          transparent 1px
+        );
+      background-size: 48px 48px;
+      content: "";
+      inset: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .gvi-hero__inner {
+      align-items: center;
       display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr);
-      align-items: end;
-      gap: 65px;
-    }
-
-    .hero-copy {
+      gap: 72px;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      min-height: 680px;
+      padding-bottom: 90px;
+      padding-top: 90px;
       position: relative;
       z-index: 2;
     }
 
-    .hero-copy h1 span {
-      color: var(--gvi-blue);
+    .gvi-hero__badge {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      display: inline-flex;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      gap: 9px;
+      letter-spacing: 0.1em;
+      margin-bottom: 26px;
+      padding: 9px 15px;
+      text-transform: uppercase;
     }
 
-    .hero-meta {
-      margin-top: 42px;
+    .gvi-hero__badge-dot {
+      background: var(--gvi-blue-light);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(133, 213, 245, 0.14);
+      height: 7px;
+      width: 7px;
+    }
+
+    .gvi-hero h1 {
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: clamp(3.3rem, 7vw, 6.3rem);
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      line-height: 0.9;
+      margin-bottom: 26px;
+      max-width: 730px;
+    }
+
+    .gvi-hero h1 span {
+      color: var(--gvi-blue-light);
+      display: block;
+    }
+
+    .gvi-hero__description {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      max-width: 650px;
+    }
+
+    .gvi-hero__meta {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 34px;
     }
 
-    .tag {
-      display: inline-flex;
+    .gvi-hero__meta-item {
       align-items: center;
-      padding: 9px 15px;
-      color: #426078;
-      background: rgba(133, 213, 245, 0.20);
-      border: 1px solid rgba(74, 141, 203, 0.18);
-      border-radius: 999px;
-      font-size: 0.84rem;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      display: flex;
+      font-size: 0.88rem;
+      font-weight: 700;
+      gap: 9px;
+      padding: 11px 15px;
+    }
+
+    .gvi-hero__meta-icon {
+      align-items: center;
+      background: rgba(133, 213, 245, 0.18);
+      border-radius: 50%;
+      color: var(--gvi-blue-light);
+      display: inline-flex;
+      height: 24px;
+      justify-content: center;
+      width: 24px;
+    }
+
+    .gvi-client-card {
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 28px;
+      box-shadow: 0 28px 70px rgba(0, 33, 63, 0.28);
+      color: var(--gvi-dark);
+      overflow: hidden;
+      padding: 38px;
+      position: relative;
+    }
+
+    .gvi-client-card::before {
+      background: linear-gradient(
+        90deg,
+        var(--gvi-blue-light),
+        var(--gvi-blue)
+      );
+      content: "";
+      height: 5px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .gvi-client-card__label {
+      color: #7b8993;
+      font-size: 0.73rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .gvi-client-card__logo {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      min-height: 125px;
+      padding: 10px 6px 25px;
+    }
+
+    .gvi-client-card__logo img {
+      max-height: 82px;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .gvi-client-card__separator {
+      background: var(--gvi-border);
+      height: 1px;
+      margin: 0 0 25px;
+      width: 100%;
+    }
+
+    .gvi-client-card__detail {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .gvi-client-card__detail strong {
+      color: var(--gvi-blue-dark);
+      display: block;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.04rem;
+      margin-bottom: 2px;
+    }
+
+    .gvi-client-card__detail span {
+      color: #7a858e;
+      font-size: 0.79rem;
+    }
+
+    /* Summary */
+
+    .gvi-summary {
+      background: var(--gvi-white);
+      margin-top: -65px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .gvi-summary__grid {
+      background: var(--gvi-white);
+      border: 1px solid rgba(74, 141, 203, 0.14);
+      border-radius: var(--gvi-radius);
+      box-shadow: var(--gvi-shadow);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+    }
+
+    .gvi-summary__item {
+      padding: 38px 34px;
+      position: relative;
+    }
+
+    .gvi-summary__item:not(:last-child)::after {
+      background: var(--gvi-border);
+      content: "";
+      height: 50%;
+      position: absolute;
+      right: 0;
+      top: 25%;
+      width: 1px;
+    }
+
+    .gvi-summary__number {
+      color: var(--gvi-blue);
+      display: block;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      margin-bottom: 7px;
+    }
+
+    .gvi-summary__label {
+      color: #67737c;
+      font-size: 0.92rem;
       font-weight: 700;
     }
 
-    .case-summary {
-      position: relative;
-      z-index: 2;
-      padding: 34px;
-      color: var(--gvi-white);
+    /* Challenge */
+
+    .gvi-challenge__grid {
+      align-items: start;
+      display: grid;
+      gap: 72px;
+      grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .gvi-challenge__panel {
       background:
         linear-gradient(
           145deg,
-          rgba(65, 65, 65, 0.98),
-          rgba(65, 65, 65, 0.90)
+          rgba(74, 141, 203, 0.08),
+          rgba(133, 213, 245, 0.14)
         );
-      border-radius: var(--radius-large);
-      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(74, 141, 203, 0.15);
+      border-radius: var(--gvi-radius);
+      padding: 38px;
     }
 
-    .case-summary::before {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      top: -18px;
-      right: 25px;
-      background: var(--gvi-light-blue);
-      border-radius: 50%;
-      content: "";
-      opacity: 0.75;
-      filter: blur(1px);
+    .gvi-challenge__panel-title {
+      color: var(--gvi-blue-dark);
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .case-summary-label {
-      color: var(--gvi-light-blue);
-      font-size: 0.75rem;
-      font-weight: 900;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .case-summary h2 {
-      margin: 12px 0 26px;
-      font-size: 2.15rem;
-    }
-
-    .case-data {
+    .gvi-challenge__list {
       display: grid;
       gap: 18px;
+      list-style: none;
     }
 
-    .case-data-item {
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.17);
-    }
-
-    .case-data-item span {
-      display: block;
-      margin-bottom: 4px;
-      color: #C9C9C9;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .case-data-item strong {
-      color: var(--gvi-white);
-      font-size: 1rem;
-    }
-
-    /* Métricas */
-
-    .metrics {
-      position: relative;
-      z-index: 4;
-      margin-top: -32px;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      overflow: hidden;
-      background: var(--gvi-white);
-      border: 1px solid var(--gvi-border);
-      border-radius: var(--radius-medium);
-      box-shadow: var(--shadow-card);
-    }
-
-    .metric {
-      min-height: 155px;
-      padding: 30px;
+    .gvi-challenge__list li {
+      align-items: flex-start;
+      color: #5c6871;
       display: flex;
-      flex-direction: column;
+      gap: 13px;
+    }
+
+    .gvi-challenge__check {
+      align-items: center;
+      background: var(--gvi-blue);
+      border-radius: 50%;
+      color: var(--gvi-white);
+      display: inline-flex;
+      flex: 0 0 24px;
+      font-size: 0.74rem;
+      height: 24px;
       justify-content: center;
-      border-right: 1px solid var(--gvi-border);
+      margin-top: 2px;
+      width: 24px;
     }
 
-    .metric:last-child {
-      border-right: 0;
+    .gvi-challenge__content p {
+      color: #606d76;
+      font-size: 1.08rem;
+      margin-bottom: 20px;
     }
 
-    .metric-number {
-      color: var(--gvi-blue);
-      font-family: var(--font-heading);
-      font-size: clamp(2.1rem, 4vw, 3.15rem);
-      font-weight: 700;
-      line-height: 1;
+    .gvi-highlight {
+      border-left: 4px solid var(--gvi-blue-light);
+      color: var(--gvi-dark);
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.28rem;
+      font-weight: 600;
+      margin-top: 30px;
+      padding: 8px 0 8px 24px;
     }
 
-    .metric-label {
-      margin-top: 10px;
-      color: #656565;
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
+    /* Services */
 
-    /* Secciones */
-
-    .section {
-      padding: 105px 0;
-    }
-
-    .section-gray {
+    .gvi-services {
       background: var(--gvi-light-gray);
     }
 
-    .section-heading {
-      max-width: 760px;
-      margin-bottom: 52px;
-    }
-
-    .two-columns {
-      display: grid;
-      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
-      align-items: start;
-      gap: 80px;
-    }
-
-    .text-block {
-      color: #5E5E5E;
-      font-size: 1.05rem;
-    }
-
-    .text-block p + p {
-      margin-top: 22px;
-    }
-
-    .challenge-card {
-      padding: 38px;
-      color: var(--gvi-white);
-      background: var(--gvi-blue);
-      border-radius: var(--radius-medium);
-      box-shadow: var(--shadow-card);
-    }
-
-    .challenge-card h3 {
-      margin-bottom: 20px;
-      color: var(--gvi-white);
-      font-size: 1.8rem;
-    }
-
-    .challenge-card p {
-      color: rgba(255, 255, 255, 0.88);
-    }
-
-    .challenge-list {
-      margin-top: 28px;
-      display: grid;
-      gap: 16px;
-      list-style: none;
-    }
-
-    .challenge-list li {
+    .gvi-services__header {
+      align-items: end;
       display: flex;
-      align-items: flex-start;
-      gap: 12px;
+      gap: 50px;
+      justify-content: space-between;
+      margin-bottom: 48px;
     }
 
-    .check {
-      width: 24px;
-      height: 24px;
-      flex: 0 0 24px;
-      display: grid;
-      place-items: center;
-      margin-top: 2px;
-      color: var(--gvi-dark);
-      background: var(--gvi-light-blue);
-      border-radius: 50%;
-      font-size: 0.75rem;
-      font-weight: 900;
+    .gvi-services__header .gvi-section-description {
+      max-width: 460px;
     }
 
-    /* Servicios */
-
-    .services-grid {
+    .gvi-services__grid {
       display: grid;
+      gap: 24px;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
     }
 
-    .service-card {
-      min-height: 285px;
-      position: relative;
+    .gvi-service-card {
+      background: var(--gvi-white);
+      border: 1px solid transparent;
+      border-radius: var(--gvi-radius);
+      box-shadow: 0 12px 30px rgba(42, 75, 104, 0.06);
+      min-height: 335px;
       overflow: hidden;
       padding: 34px;
-      background: var(--gvi-white);
-      border: 1px solid var(--gvi-border);
-      border-radius: var(--radius-medium);
-      box-shadow: 0 8px 20px rgba(65, 65, 65, 0.04);
+      position: relative;
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
     }
 
-    .service-card::after {
-      width: 125px;
-      height: 125px;
-      position: absolute;
-      right: -65px;
-      bottom: -65px;
-      background: rgba(133, 213, 245, 0.22);
-      border-radius: 50%;
-      content: "";
+    .gvi-service-card:hover {
+      border-color: rgba(74, 141, 203, 0.25);
+      box-shadow: 0 24px 48px rgba(42, 75, 104, 0.13);
+      transform: translateY(-8px);
     }
 
-    .service-number {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 28px;
-      color: var(--gvi-white);
-      background: var(--gvi-blue);
-      border-radius: 14px;
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
+    .gvi-service-card__number {
+      color: rgba(74, 141, 203, 0.12);
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 4.8rem;
       font-weight: 700;
+      line-height: 1;
+      position: absolute;
+      right: 23px;
+      top: 17px;
     }
 
-    .service-card h3 {
-      margin-bottom: 14px;
-    }
-
-    .service-card p {
-      color: #686868;
-      font-size: 0.94rem;
-    }
-
-    /* Solución */
-
-    .solution-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      gap: 28px;
-    }
-
-    .solution-panel {
-      min-height: 440px;
-      padding: 45px;
-      border-radius: var(--radius-large);
-    }
-
-    .solution-panel.primary {
-      color: var(--gvi-white);
-      background: var(--gvi-dark);
-    }
-
-    .solution-panel.secondary {
+    .gvi-service-card__icon {
+      align-items: center;
       background:
         linear-gradient(
           145deg,
-          rgba(133, 213, 245, 0.52),
-          rgba(74, 141, 203, 0.18)
+          rgba(74, 141, 203, 0.08),
+          rgba(133, 213, 245, 0.16)
         );
-    }
-
-    .solution-panel h2 {
-      margin-bottom: 26px;
-    }
-
-    .solution-panel.primary h2 {
-      color: var(--gvi-white);
-    }
-
-    .solution-panel.primary p {
-      color: #D7D7D7;
-    }
-
-    .solution-steps {
-      margin-top: 34px;
-      display: grid;
-      gap: 20px;
-      list-style: none;
-    }
-
-    .solution-steps li {
-      display: grid;
-      grid-template-columns: 36px 1fr;
-      align-items: start;
-      gap: 14px;
-    }
-
-    .step-icon {
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-items: center;
-      color: var(--gvi-dark);
-      background: var(--gvi-light-blue);
-      border-radius: 10px;
-      font-family: var(--font-heading);
-      font-weight: 700;
-    }
-
-    .solution-steps strong {
-      display: block;
-      margin-bottom: 2px;
-      color: var(--gvi-white);
-    }
-
-    .solution-steps span {
-      color: #C8C8C8;
-      font-size: 0.89rem;
-    }
-
-    .architecture {
-      min-height: 250px;
-      margin-top: 32px;
+      border-radius: 18px;
+      display: flex;
+      height: 94px;
+      justify-content: center;
+      margin-bottom: 28px;
+      overflow: hidden;
+      padding: 16px;
       position: relative;
-      display: grid;
-      place-items: center;
+      width: 94px;
+      z-index: 2;
     }
 
-    .architecture-center {
-      width: 150px;
-      height: 150px;
+    .gvi-service-card__icon img {
+      height: 100%;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .gvi-service-card h3 {
+      color: var(--gvi-dark);
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
       position: relative;
       z-index: 2;
+    }
+
+    .gvi-service-card p {
+      color: #68747d;
+      font-size: 0.96rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Solution */
+
+    .gvi-solution__grid {
+      align-items: center;
       display: grid;
-      place-items: center;
-      color: var(--gvi-white);
-      background: var(--gvi-blue);
-      border: 14px solid rgba(255, 255, 255, 0.75);
+      gap: 76px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .gvi-architecture {
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(133, 213, 245, 0.2),
+          transparent 55%
+        ),
+        #f7fafc;
+      border: 1px solid var(--gvi-border);
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      min-height: 520px;
+      padding: 40px;
+      position: relative;
+    }
+
+    .gvi-architecture__center {
+      align-items: center;
+      background:
+        linear-gradient(
+          145deg,
+          var(--gvi-blue),
+          var(--gvi-blue-dark)
+        );
+      border: 8px solid var(--gvi-white);
       border-radius: 50%;
-      box-shadow: 0 15px 35px rgba(74, 141, 203, 0.24);
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 700;
+      box-shadow: 0 20px 40px rgba(33, 98, 148, 0.27);
+      color: var(--gvi-white);
+      display: flex;
+      flex-direction: column;
+      height: 165px;
+      justify-content: center;
+      position: relative;
       text-align: center;
-    }
-
-    .architecture-node {
-      min-width: 112px;
-      position: absolute;
+      width: 165px;
       z-index: 3;
-      padding: 11px 15px;
-      color: var(--gvi-dark);
-      background: var(--gvi-white);
-      border: 1px solid rgba(74, 141, 203, 0.22);
-      border-radius: 999px;
-      box-shadow: 0 6px 16px rgba(65, 65, 65, 0.08);
-      font-size: 0.78rem;
-      font-weight: 900;
-      text-align: center;
     }
 
-    .architecture-node.node-one {
-      top: 8px;
-      left: 50%;
-      transform: translateX(-50%);
+    .gvi-architecture__center strong {
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.35rem;
+      line-height: 1.05;
     }
 
-    .architecture-node.node-two {
-      top: 50%;
-      right: 5px;
-      transform: translateY(-50%);
+    .gvi-architecture__center span {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.72rem;
+      margin-top: 5px;
     }
 
-    .architecture-node.node-three {
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
+    .gvi-architecture__orbit {
+      border: 1px dashed rgba(74, 141, 203, 0.35);
+      border-radius: 50%;
+      height: 370px;
+      position: absolute;
+      width: 370px;
     }
 
-    .architecture-node.node-four {
-      top: 50%;
-      left: 5px;
-      transform: translateY(-50%);
-    }
-
-    /* Valor */
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .value-item {
-      padding: 30px;
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      align-items: start;
-      gap: 18px;
+    .gvi-architecture__node {
+      align-items: center;
       background: var(--gvi-white);
       border: 1px solid var(--gvi-border);
-      border-radius: var(--radius-medium);
-    }
-
-    .value-icon {
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      color: var(--gvi-blue);
-      background: rgba(133, 213, 245, 0.24);
       border-radius: 16px;
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    .value-item h3 {
-      margin-bottom: 8px;
-      font-size: 1.2rem;
-    }
-
-    .value-item p {
-      color: #696969;
-      font-size: 0.92rem;
-    }
-
-    /* Nota de confidencialidad */
-
-    .disclaimer {
-      margin-top: 42px;
-      padding: 22px 25px;
+      box-shadow: 0 12px 24px rgba(42, 75, 104, 0.1);
+      color: var(--gvi-blue-dark);
       display: flex;
-      align-items: flex-start;
-      gap: 15px;
-      color: #686868;
-      background: #F8FAFB;
-      border-left: 4px solid var(--gvi-light-blue);
-      border-radius: 0 var(--radius-small) var(--radius-small) 0;
+      font-family: "Mukta Mahee", sans-serif;
       font-size: 0.82rem;
+      font-weight: 700;
+      height: 72px;
+      justify-content: center;
+      padding: 10px;
+      position: absolute;
+      text-align: center;
+      width: 130px;
+      z-index: 4;
     }
 
-    .disclaimer strong {
-      color: var(--gvi-dark);
+    .gvi-architecture__node--top {
+      left: 50%;
+      top: 28px;
+      transform: translateX(-50%);
+    }
+
+    .gvi-architecture__node--right {
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .gvi-architecture__node--bottom {
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .gvi-architecture__node--left {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .gvi-solution__steps {
+      display: grid;
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .gvi-solution__step {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 48px 1fr;
+    }
+
+    .gvi-solution__step-number {
+      align-items: center;
+      background: rgba(74, 141, 203, 0.1);
+      border-radius: 14px;
+      color: var(--gvi-blue);
+      display: flex;
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      height: 48px;
+      justify-content: center;
+      width: 48px;
+    }
+
+    .gvi-solution__step h3 {
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .gvi-solution__step p {
+      color: #6c7881;
+      font-size: 0.94rem;
+    }
+
+    /* Value */
+
+    .gvi-value {
+      background:
+        linear-gradient(
+          135deg,
+          #153f62 0%,
+          #276fa8 100%
+        );
+      color: var(--gvi-white);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gvi-value::before {
+      background:
+        radial-gradient(
+          circle,
+          rgba(133, 213, 245, 0.24),
+          transparent 60%
+        );
+      content: "";
+      height: 580px;
+      position: absolute;
+      right: -160px;
+      top: -250px;
+      width: 580px;
+    }
+
+    .gvi-value .gvi-eyebrow {
+      color: var(--gvi-blue-light);
+    }
+
+    .gvi-value .gvi-section-title {
+      color: var(--gvi-white);
+      max-width: 760px;
+    }
+
+    .gvi-value__grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .gvi-value-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 18px;
+      padding: 28px;
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .gvi-value-card:hover {
+      background: rgba(255, 255, 255, 0.13);
+      transform: translateY(-5px);
+    }
+
+    .gvi-value-card__icon {
+      align-items: center;
+      background: rgba(133, 213, 245, 0.15);
+      border-radius: 13px;
+      color: var(--gvi-blue-light);
+      display: flex;
+      font-size: 1.25rem;
+      height: 45px;
+      justify-content: center;
+      margin-bottom: 21px;
+      width: 45px;
+    }
+
+    .gvi-value-card h3 {
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.2;
+      margin-bottom: 9px;
+    }
+
+    .gvi-value-card p {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.9rem;
+    }
+
+    /* Confidentiality */
+
+    .gvi-confidentiality {
+      background: var(--gvi-light-gray);
+      padding: 70px 0;
+    }
+
+    .gvi-confidentiality__box {
+      align-items: center;
+      background: var(--gvi-white);
+      border: 1px solid var(--gvi-border);
+      border-radius: var(--gvi-radius);
+      display: grid;
+      gap: 26px;
+      grid-template-columns: 70px 1fr;
+      padding: 32px;
+    }
+
+    .gvi-confidentiality__icon {
+      align-items: center;
+      background: rgba(74, 141, 203, 0.1);
+      border-radius: 18px;
+      color: var(--gvi-blue);
+      display: flex;
+      font-size: 1.6rem;
+      height: 70px;
+      justify-content: center;
+      width: 70px;
+    }
+
+    .gvi-confidentiality h3 {
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: 1.22rem;
+      margin-bottom: 5px;
+    }
+
+    .gvi-confidentiality p {
+      color: #6d7981;
+      font-size: 0.92rem;
     }
 
     /* CTA */
 
-    .cta {
-      position: relative;
-      overflow: hidden;
-      padding: 95px 0;
-      color: var(--gvi-white);
-      background: var(--gvi-blue);
+    .gvi-cta {
+      background: var(--gvi-white);
+      padding: 100px 0;
+      text-align: center;
     }
 
-    .cta::before,
-    .cta::after {
-      position: absolute;
-      border-radius: 50%;
-      content: "";
+    .gvi-cta__content {
+      margin: 0 auto;
+      max-width: 800px;
     }
 
-    .cta::before {
-      width: 360px;
-      height: 360px;
-      top: -220px;
-      right: 4%;
-      border: 70px solid rgba(133, 213, 245, 0.32);
+    .gvi-cta h2 {
+      color: var(--gvi-dark);
+      font-family: "Mukta Mahee", sans-serif;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 22px;
     }
 
-    .cta::after {
-      width: 230px;
-      height: 230px;
-      bottom: -160px;
-      left: 6%;
-      background: rgba(65, 65, 65, 0.13);
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .cta h2 {
-      max-width: 790px;
-      color: var(--gvi-white);
-    }
-
-    .cta p {
-      max-width: 700px;
-      margin-top: 18px;
-      color: rgba(255, 255, 255, 0.86);
+    .gvi-cta p {
+      color: #68747d;
       font-size: 1.08rem;
+      margin: 0 auto 32px;
+      max-width: 640px;
+    }
+
+    .gvi-button {
+      align-items: center;
+      background: var(--gvi-blue);
+      border: 1px solid var(--gvi-blue);
+      border-radius: 999px;
+      color: var(--gvi-white);
+      display: inline-flex;
+      font-weight: 900;
+      gap: 10px;
+      justify-content: center;
+      padding: 15px 26px;
+      transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .gvi-button:hover {
+      background: var(--gvi-blue-dark);
+      box-shadow: 0 15px 30px rgba(74, 141, 203, 0.25);
+      transform: translateY(-3px);
     }
 
     /* Footer */
 
-    footer {
+    .gvi-footer {
+      background: #30383e;
+      color: rgba(255, 255, 255, 0.7);
       padding: 38px 0;
-      color: #C9C9C9;
-      background: var(--gvi-dark);
     }
 
-    .footer-content {
-      display: flex;
+    .gvi-footer__inner {
       align-items: center;
-      justify-content: space-between;
+      display: flex;
       gap: 30px;
-      font-size: 0.82rem;
+      justify-content: space-between;
     }
 
-    .footer-content strong {
-      color: var(--gvi-white);
+    .gvi-footer__logo {
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+      width: 140px;
+    }
+
+    .gvi-footer__copy {
+      font-size: 0.82rem;
+      text-align: right;
+    }
+
+    /* Animation */
+
+    .gvi-reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .gvi-reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Responsive */
 
-    @media (max-width: 960px) {
-      .nav-links {
+    @media (max-width: 980px) {
+      .gvi-nav a:not(.gvi-nav__cta) {
         display: none;
       }
 
-      .hero {
-        padding-top: 80px;
-      }
-
-      .hero-grid,
-      .two-columns,
-      .solution-layout {
+      .gvi-hero__inner,
+      .gvi-challenge__grid,
+      .gvi-solution__grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-grid {
+      .gvi-hero__inner {
+        gap: 44px;
+      }
+
+      .gvi-client-card {
+        max-width: 580px;
+      }
+
+      .gvi-services__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gvi-value__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gvi-services__header {
         align-items: start;
-      }
-
-      .case-summary {
-        max-width: 620px;
-      }
-
-      .metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .metric:nth-child(2) {
-        border-right: 0;
-      }
-
-      .metric:nth-child(-n + 2) {
-        border-bottom: 1px solid var(--gvi-border);
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .cta-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
       }
     }
 
-    @media (max-width: 650px) {
-      .container {
-        width: min(calc(100% - 28px), var(--content-width));
+    @media (max-width: 700px) {
+      .gvi-section {
+        padding: 72px 0;
       }
 
-      .site-header .button {
-        display: none;
+      .gvi-header__inner {
+        min-height: 70px;
       }
 
-      .brand-name small {
-        display: none;
+      .gvi-header__logo {
+        width: 135px;
       }
 
-      .hero {
-        padding: 65px 0 65px;
+      .gvi-nav__cta {
+        font-size: 0.78rem !important;
+        padding: 9px 14px;
       }
 
-      h1 {
-        font-size: 2.75rem;
+      .gvi-hero,
+      .gvi-hero__inner {
+        min-height: auto;
       }
 
-      .section {
-        padding: 75px 0;
+      .gvi-hero__inner {
+        padding-bottom: 115px;
+        padding-top: 70px;
       }
 
-      .metrics {
-        margin-top: -18px;
+      .gvi-hero h1 {
+        font-size: clamp(3rem, 16vw, 4.5rem);
       }
 
-      .metrics-grid,
-      .services-grid,
-      .value-grid {
+      .gvi-client-card {
+        padding: 28px;
+      }
+
+      .gvi-summary {
+        margin-top: -55px;
+      }
+
+      .gvi-summary__grid,
+      .gvi-services__grid,
+      .gvi-value__grid {
         grid-template-columns: 1fr;
       }
 
-      .metric {
-        min-height: 130px;
-        border-right: 0;
-        border-bottom: 1px solid var(--gvi-border);
+      .gvi-summary__item:not(:last-child)::after {
+        bottom: 0;
+        height: 1px;
+        left: 8%;
+        right: 8%;
+        top: auto;
+        width: auto;
       }
 
-      .metric:nth-child(3) {
-        border-bottom: 1px solid var(--gvi-border);
+      .gvi-summary__item {
+        padding: 28px;
       }
 
-      .metric:last-child {
-        border-bottom: 0;
+      .gvi-architecture {
+        min-height: 430px;
+        padding: 20px;
       }
 
-      .case-summary,
-      .challenge-card,
-      .solution-panel {
-        padding: 29px;
+      .gvi-architecture__orbit {
+        height: 280px;
+        width: 280px;
       }
 
-      .value-item {
+      .gvi-architecture__center {
+        height: 125px;
+        width: 125px;
+      }
+
+      .gvi-architecture__node {
+        font-size: 0.7rem;
+        height: 60px;
+        width: 100px;
+      }
+
+      .gvi-architecture__node--top {
+        top: 20px;
+      }
+
+      .gvi-architecture__node--bottom {
+        bottom: 20px;
+      }
+
+      .gvi-architecture__node--left {
+        left: 8px;
+      }
+
+      .gvi-architecture__node--right {
+        right: 8px;
+      }
+
+      .gvi-confidentiality__box {
         grid-template-columns: 1fr;
       }
 
-      .footer-content {
+      .gvi-footer__inner {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .gvi-footer__copy {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .gvi-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -955,516 +1156,601 @@
 
 <body>
 
-  <!-- Navegación -->
-  <header class="site-header">
-    <div class="container nav">
+  <!-- Header -->
+  <header class="gvi-header">
+    <div class="gvi-container gvi-header__inner">
 
-      <!-- Sustituir por el logo oficial cuando esté disponible -->
-      <a href="#" class="brand" aria-label="GVI Security Solutions">
-        <div class="brand-mark" aria-hidden="true">
-          <span>G</span>
-        </div>
-
-        <div class="brand-name">
-          <strong>GVI Security Solutions</strong>
-          <small>Integración · Seguridad · Tecnología</small>
-        </div>
+      <a
+        class="gvi-header__logo"
+        href="#inicio"
+        aria-label="Ir al inicio"
+      >
+        <img
+          src="https://gviss.com.mx/wp-content/uploads/2023/01/Group-2.svg"
+          alt="GVI Security Solutions"
+        >
       </a>
 
-      <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#reto">El reto</a>
-        <a href="#solucion">La solución</a>
+      <nav class="gvi-nav" aria-label="Navegación principal">
+        <a href="#reto">Reto</a>
         <a href="#servicios">Servicios</a>
-        <a href="#valor">Valor aportado</a>
+        <a href="#solucion">Solución</a>
+        <a href="#valor">Valor</a>
+        <a class="gvi-nav__cta" href="#contacto">
+          Contactar
+        </a>
       </nav>
 
-      <a class="button" href="#contacto">Hablar con un especialista</a>
     </div>
   </header>
-
 
   <main>
 
     <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
+    <section class="gvi-hero" id="inicio">
+      <div class="gvi-container gvi-hero__inner">
 
-        <div class="hero-copy">
-          <span class="eyebrow">Caso de éxito · Sector bancos</span>
+        <div class="gvi-hero__content gvi-reveal">
+
+          <div class="gvi-hero__badge">
+            <span class="gvi-hero__badge-dot"></span>
+            Caso de éxito
+          </div>
 
           <h1>
-            Plataforma Nacional de
-            <span>Integración de Seguridad</span>
+            Seguridad bancaria
+            <span>centralizada.</span>
           </h1>
 
-          <p class="lead">
-            Centralización de sistemas de videovigilancia, intrusión y
-            control de acceso para administrar eventos de seguridad desde
-            un solo punto de operación.
+          <p class="gvi-hero__description">
+            Integración de capacidades de monitoreo, gestión de video y
+            operación centralizada para una infraestructura bancaria de
+            gran escala.
           </p>
 
-          <div class="hero-meta" aria-label="Servicios relacionados">
-            <span class="tag">PSIM/ISOC</span>
-            <span class="tag">Centros de control</span>
-            <span class="tag">VMS</span>
-            <span class="tag">Control de Acceso</span>
-            <span class="tag">Sistemas de intrusión</span>
+          <div class="gvi-hero__meta">
+
+            <div class="gvi-hero__meta-item">
+              <span class="gvi-hero__meta-icon">✓</span>
+              Sector bancario
+            </div>
+
+            <div class="gvi-hero__meta-item">
+              <span class="gvi-hero__meta-icon">✓</span>
+              Cobertura nacional
+            </div>
+
+            <div class="gvi-hero__meta-item">
+              <span class="gvi-hero__meta-icon">✓</span>
+              Infraestructura crítica
+            </div>
+
           </div>
         </div>
 
-        <aside class="case-summary" aria-label="Ficha del proyecto">
-          <span class="case-summary-label">Ficha del proyecto</span>
+        <aside class="gvi-client-card gvi-reveal">
 
-          <h2>Operación bancaria de alcance nacional</h2>
+          <p class="gvi-client-card__label">
+            Cliente
+          </p>
 
-          <div class="case-data">
-            <div class="case-data-item">
-              <span>Cliente final</span>
-              <strong>Santander</strong>
-            </div>
+          <div class="gvi-client-card__logo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/3840px-Banco_Santander_Logotipo.svg.png"
+              alt="Santander"
+            >
+          </div>
 
-            <div class="case-data-item">
+          <div class="gvi-client-card__separator"></div>
+
+          <div class="gvi-client-card__detail">
+
+            <div>
+              <strong>Banca</strong>
               <span>Sector</span>
-              <strong>Bancos · Privado</strong>
             </div>
 
-            <div class="case-data-item">
-              <span>Tipo de solución</span>
-              <strong>Integración y centralización multisistema</strong>
-            </div>
-
-            <div class="case-data-item">
+            <div>
+              <strong>México</strong>
               <span>Cobertura</span>
-              <strong>Nacional</strong>
             </div>
+
+            <div>
+              <strong>Integración</strong>
+              <span>Participación</span>
+            </div>
+
+            <div>
+              <strong>Operación crítica</strong>
+              <span>Entorno</span>
+            </div>
+
           </div>
         </aside>
 
       </div>
     </section>
 
+    <!-- Project summary -->
+    <section class="gvi-summary">
+      <div class="gvi-container">
 
-    <!-- Indicadores -->
-    <section class="metrics" aria-label="Indicadores del proyecto">
-      <div class="container">
-        <div class="metrics-grid">
+        <div class="gvi-summary__grid gvi-reveal">
 
-          <article class="metric">
-            <strong class="metric-number">+1,400</strong>
-            <span class="metric-label">Sucursales consideradas</span>
+          <article class="gvi-summary__item">
+            <span class="gvi-summary__number">1,400+</span>
+            <span class="gvi-summary__label">
+              Sucursales dentro del alcance documentado
+            </span>
           </article>
 
-          <article class="metric">
-            <strong class="metric-number">+9,000</strong>
-            <span class="metric-label">Cajeros dentro de la operación</span>
+          <article class="gvi-summary__item">
+            <span class="gvi-summary__number">9,000</span>
+            <span class="gvi-summary__label">
+              Cajeros considerados en la infraestructura
+            </span>
           </article>
 
-          <article class="metric">
-            <strong class="metric-number">1</strong>
-            <span class="metric-label">Punto central de operación</span>
-          </article>
-
-          <article class="metric">
-            <strong class="metric-number">Nacional</strong>
-            <span class="metric-label">Cobertura del proyecto</span>
+          <article class="gvi-summary__item">
+            <span class="gvi-summary__number">24/7</span>
+            <span class="gvi-summary__label">
+              Entorno de operación y supervisión continua
+            </span>
           </article>
 
         </div>
+
       </div>
     </section>
 
+    <!-- Challenge -->
+    <section class="gvi-section" id="reto">
+      <div class="gvi-container gvi-challenge__grid">
 
-    <!-- Reto -->
-    <section class="section" id="reto">
-      <div class="container two-columns">
+        <div class="gvi-challenge__content gvi-reveal">
 
-        <div class="section-heading">
-          <span class="eyebrow">El reto</span>
+          <span class="gvi-eyebrow">
+            El reto
+          </span>
 
-          <h2>
-            Unificar una operación distribuida y de alta complejidad
+          <h2 class="gvi-section-title">
+            Coordinar una operación distribuida y de alta criticidad.
           </h2>
-        </div>
 
-        <div>
-          <div class="text-block">
-            <p>
-              La operación requería consolidar múltiples sistemas de
-              seguridad instalados en una extensa red de sucursales y
-              cajeros automáticos, manteniendo una visión centralizada de
-              los eventos relevantes.
-            </p>
+          <p>
+            Una infraestructura bancaria con cobertura nacional requiere
+            visibilidad operativa, administración centralizada y capacidad
+            para coordinar múltiples sistemas de seguridad.
+          </p>
 
-            <p>
-              El proyecto demandaba interoperabilidad entre distintas
-              tecnologías, estandarización de procesos y capacidad para
-              administrar incidencias desde un solo punto, sin perder la
-              flexibilidad necesaria para la evolución de la infraestructura.
-            </p>
+          <p>
+            El proyecto demandó una arquitectura capaz de integrar
+            información proveniente de diferentes ubicaciones y facilitar
+            su supervisión desde entornos especializados de control.
+          </p>
+
+          <div class="gvi-highlight">
+            La seguridad debía operar como una plataforma integrada, no
+            como un conjunto de sistemas aislados.
           </div>
 
-          <article class="challenge-card" style="margin-top: 34px;">
-            <h3>Prioridades operativas</h3>
-
-            <p>
-              La solución debía fortalecer la capacidad de supervisión y
-              facilitar la coordinación de los distintos subsistemas.
-            </p>
-
-            <ul class="challenge-list">
-              <li>
-                <span class="check">✓</span>
-                <span>Centralizar información procedente de múltiples sitios.</span>
-              </li>
-
-              <li>
-                <span class="check">✓</span>
-                <span>Integrar videovigilancia, intrusión y control de acceso.</span>
-              </li>
-
-              <li>
-                <span class="check">✓</span>
-                <span>Homologar la gestión y atención de eventos.</span>
-              </li>
-
-              <li>
-                <span class="check">✓</span>
-                <span>Contar con una arquitectura preparada para crecer.</span>
-              </li>
-            </ul>
-          </article>
         </div>
+
+        <aside class="gvi-challenge__panel gvi-reveal">
+
+          <h3 class="gvi-challenge__panel-title">
+            Prioridades operativas
+          </h3>
+
+          <ul class="gvi-challenge__list">
+
+            <li>
+              <span class="gvi-challenge__check">✓</span>
+              <span>
+                Centralizar la supervisión de una infraestructura
+                geográficamente distribuida.
+              </span>
+            </li>
+
+            <li>
+              <span class="gvi-challenge__check">✓</span>
+              <span>
+                Facilitar el acceso a video e información operativa
+                relevante.
+              </span>
+            </li>
+
+            <li>
+              <span class="gvi-challenge__check">✓</span>
+              <span>
+                Estandarizar procedimientos para la atención de eventos.
+              </span>
+            </li>
+
+            <li>
+              <span class="gvi-challenge__check">✓</span>
+              <span>
+                Mantener capacidad de crecimiento e integración con
+                nuevas tecnologías.
+              </span>
+            </li>
+
+          </ul>
+
+        </aside>
 
       </div>
     </section>
 
+    <!-- Services -->
+    <section class="gvi-section gvi-services" id="servicios">
+      <div class="gvi-container">
 
-    <!-- Servicios -->
-    <section class="section section-gray" id="servicios">
-      <div class="container">
+        <div class="gvi-services__header gvi-reveal">
 
-        <div class="section-heading">
-          <span class="eyebrow">Servicios involucrados</span>
+          <div>
+            <span class="gvi-eyebrow">
+              Servicios aplicados
+            </span>
 
-          <h2>
-            Capacidades integradas para una gestión unificada
-          </h2>
+            <h2 class="gvi-section-title">
+              Capacidades integradas en una misma estrategia.
+            </h2>
+          </div>
 
-          <p class="lead">
-            La participación combinó plataformas, sistemas y capacidades
-            especializadas para centralizar la operación de seguridad.
+          <p class="gvi-section-description">
+            La solución combina plataformas de gestión, video y operación
+            para fortalecer la coordinación de la infraestructura de
+            seguridad.
           </p>
+
         </div>
 
-        <div class="services-grid">
+        <div class="gvi-services__grid">
 
-          <article class="service-card">
-            <div class="service-number">01</div>
+          <article class="gvi-service-card gvi-reveal">
 
-            <h3>PSIM/ISOC</h3>
+            <span class="gvi-service-card__number">01</span>
+
+            <div class="gvi-service-card__icon">
+              <img
+                src="https://gviss.com.mx/wp-content/uploads/2023/03/PSIM.png"
+                alt="Icono PSIM e ISOC"
+                loading="lazy"
+              >
+            </div>
+
+            <h3>PSIM / ISOC</h3>
 
             <p>
-              Plataforma de integración de sistemas de seguridad para
-              centros de control y gestión coordinada de eventos.
+              Integración de información operativa y eventos de seguridad
+              dentro de una plataforma centralizada para facilitar su
+              gestión.
             </p>
+
           </article>
 
-          <article class="service-card">
-            <div class="service-number">02</div>
+          <article class="gvi-service-card gvi-reveal">
+
+            <span class="gvi-service-card__number">02</span>
+
+            <div class="gvi-service-card__icon">
+              <img
+                src="https://gviss.com.mx/wp-content/uploads/2023/03/VMS.png"
+                alt="Icono VMS"
+                loading="lazy"
+              >
+            </div>
 
             <h3>VMS</h3>
 
             <p>
-              Gestión de videovigilancia compatible con múltiples
-              dispositivos, plataformas y componentes tecnológicos.
+              Administración y visualización de sistemas de video para
+              apoyar la supervisión de instalaciones y la consulta de
+              eventos.
             </p>
+
           </article>
 
-          <article class="service-card">
-            <div class="service-number">03</div>
+          <article class="gvi-service-card gvi-reveal">
 
-            <h3>Control de Acceso</h3>
+            <span class="gvi-service-card__number">03</span>
 
-            <p>
-              Integración de software, lectores y dispositivos para
-              administrar accesos dentro de la infraestructura.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">04</div>
-
-            <h3>Sistemas de intrusión</h3>
-
-            <p>
-              Incorporación de señales y eventos provenientes de sensores
-              y sistemas de alarma distribuidos.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">05</div>
+            <div class="gvi-service-card__icon">
+              <img
+                src="https://gviss.com.mx/wp-content/uploads/2023/03/Control1.png"
+                alt="Icono Centros de control"
+                loading="lazy"
+              >
+            </div>
 
             <h3>Centros de control</h3>
 
             <p>
-              Centralización de tecnologías y operación de incidencias
-              desde un punto común de supervisión.
+              Infraestructura especializada para concentrar capacidades de
+              monitoreo, coordinación y atención de eventos de seguridad.
             </p>
-          </article>
 
-          <article class="service-card">
-            <div class="service-number">06</div>
-
-            <h3>Integración tecnológica</h3>
-
-            <p>
-              Interoperabilidad entre sistemas existentes para conformar
-              una arquitectura coherente, escalable y administrable.
-            </p>
           </article>
 
         </div>
       </div>
     </section>
 
+    <!-- Solution -->
+    <section class="gvi-section" id="solucion">
+      <div class="gvi-container gvi-solution__grid">
 
-    <!-- Solución -->
-    <section class="section" id="solucion">
-      <div class="container">
+        <div class="gvi-architecture gvi-reveal">
 
-        <div class="section-heading">
-          <span class="eyebrow">La solución</span>
+          <div class="gvi-architecture__orbit"></div>
 
-          <h2>
-            Una plataforma central para integrar la operación de seguridad
-          </h2>
+          <div class="gvi-architecture__center">
+            <strong>Centro de<br>control</strong>
+            <span>Operación centralizada</span>
+          </div>
+
+          <div class="gvi-architecture__node gvi-architecture__node--top">
+            PSIM / ISOC
+          </div>
+
+          <div class="gvi-architecture__node gvi-architecture__node--right">
+            Gestión de video
+          </div>
+
+          <div class="gvi-architecture__node gvi-architecture__node--bottom">
+            Eventos y alertas
+          </div>
+
+          <div class="gvi-architecture__node gvi-architecture__node--left">
+            Infraestructura distribuida
+          </div>
+
         </div>
 
-        <div class="solution-layout">
+        <div class="gvi-reveal">
 
-          <article class="solution-panel primary">
-            <h2>Enfoque de implementación</h2>
+          <span class="gvi-eyebrow">
+            La solución
+          </span>
 
-            <p>
-              GVI participó en la integración y centralización de los
-              sistemas de seguridad, habilitando la administración de
-              eventos desde un solo punto de operación.
-            </p>
+          <h2 class="gvi-section-title">
+            Una arquitectura orientada a la integración y la coordinación.
+          </h2>
 
-            <ul class="solution-steps">
-              <li>
-                <span class="step-icon">1</span>
-                <div>
-                  <strong>Integración de subsistemas</strong>
-                  <span>
-                    Incorporación de videovigilancia, intrusión y
-                    control de acceso.
-                  </span>
-                </div>
-              </li>
+          <p class="gvi-section-description">
+            GVI participó en la integración de capacidades tecnológicas
+            para centralizar información, gestionar video y apoyar la
+            operación desde centros especializados.
+          </p>
 
-              <li>
-                <span class="step-icon">2</span>
-                <div>
-                  <strong>Centralización operativa</strong>
-                  <span>
-                    Consolidación de señales y eventos procedentes de
-                    instalaciones distribuidas.
-                  </span>
-                </div>
-              </li>
+          <div class="gvi-solution__steps">
 
-              <li>
-                <span class="step-icon">3</span>
-                <div>
-                  <strong>Gestión unificada</strong>
-                  <span>
-                    Administración de incidencias mediante una visión
-                    común de la operación.
-                  </span>
-                </div>
-              </li>
+            <article class="gvi-solution__step">
+              <span class="gvi-solution__step-number">01</span>
 
-              <li>
-                <span class="step-icon">4</span>
-                <div>
-                  <strong>Escalabilidad</strong>
-                  <span>
-                    Base tecnológica preparada para ampliaciones e
-                    integraciones futuras.
-                  </span>
-                </div>
-              </li>
-            </ul>
-          </article>
-
-          <article class="solution-panel secondary">
-            <span class="eyebrow">Arquitectura conceptual</span>
-
-            <h2>Integración multisistema</h2>
-
-            <p>
-              Una capa central conecta las principales tecnologías de
-              seguridad y facilita una operación coordinada.
-            </p>
-
-            <div class="architecture" aria-label="Diagrama conceptual">
-              <span class="architecture-node node-one">VMS</span>
-              <span class="architecture-node node-two">Intrusión</span>
-              <span class="architecture-node node-three">Accesos</span>
-              <span class="architecture-node node-four">CCTV</span>
-
-              <div class="architecture-center">
-                PSIM<br>ISOC
+              <div>
+                <h3>Integración de plataformas</h3>
+                <p>
+                  Conexión de sistemas relevantes dentro de una
+                  arquitectura de seguridad coordinada.
+                </p>
               </div>
-            </div>
-          </article>
+            </article>
+
+            <article class="gvi-solution__step">
+              <span class="gvi-solution__step-number">02</span>
+
+              <div>
+                <h3>Centralización operativa</h3>
+                <p>
+                  Concentración de información y herramientas para apoyar
+                  la supervisión y atención de eventos.
+                </p>
+              </div>
+            </article>
+
+            <article class="gvi-solution__step">
+              <span class="gvi-solution__step-number">03</span>
+
+              <div>
+                <h3>Escalabilidad tecnológica</h3>
+                <p>
+                  Diseño preparado para integrar nuevas ubicaciones,
+                  capacidades y requerimientos operativos.
+                </p>
+              </div>
+            </article>
+
+          </div>
 
         </div>
+
       </div>
     </section>
 
+    <!-- Value -->
+    <section class="gvi-section gvi-value" id="valor">
+      <div class="gvi-container">
 
-    <!-- Valor aportado -->
-    <section class="section section-gray" id="valor">
-      <div class="container">
+        <div class="gvi-reveal">
+          <span class="gvi-eyebrow">
+            Valor operativo
+          </span>
 
-        <div class="section-heading">
-          <span class="eyebrow">Valor para la operación</span>
-
-          <h2>
-            Capacidades que fortalecen la gestión de seguridad
+          <h2 class="gvi-section-title">
+            Seguridad conectada con la operación del negocio.
           </h2>
-
-          <p class="lead">
-            El valor del proyecto se concentra en la integración,
-            estandarización y visibilidad de una operación distribuida.
-          </p>
         </div>
 
-        <div class="value-grid">
+        <div class="gvi-value__grid">
 
-          <article class="value-item">
-            <div class="value-icon">01</div>
+          <article class="gvi-value-card gvi-reveal">
+            <div class="gvi-value-card__icon">◎</div>
 
-            <div>
-              <h3>Visibilidad centralizada</h3>
-              <p>
-                Consolidación de eventos e información relevante para
-                facilitar la supervisión desde un punto común.
-              </p>
-            </div>
+            <h3>Visibilidad centralizada</h3>
+
+            <p>
+              Acceso consolidado a información relevante para la
+              supervisión de la infraestructura.
+            </p>
           </article>
 
-          <article class="value-item">
-            <div class="value-icon">02</div>
+          <article class="gvi-value-card gvi-reveal">
+            <div class="gvi-value-card__icon">⌁</div>
 
-            <div>
-              <h3>Interoperabilidad</h3>
-              <p>
-                Coordinación de múltiples sistemas y tecnologías dentro de
-                una arquitectura integral.
-              </p>
-            </div>
+            <h3>Interoperabilidad</h3>
+
+            <p>
+              Capacidad para coordinar diferentes sistemas y tecnologías
+              dentro de una misma operación.
+            </p>
           </article>
 
-          <article class="value-item">
-            <div class="value-icon">03</div>
+          <article class="gvi-value-card gvi-reveal">
+            <div class="gvi-value-card__icon">↗</div>
 
-            <div>
-              <h3>Estandarización operativa</h3>
-              <p>
-                Base para homologar criterios de monitoreo, gestión y
-                atención de incidencias.
-              </p>
-            </div>
+            <h3>Escalabilidad</h3>
+
+            <p>
+              Arquitectura preparada para incorporar ubicaciones,
+              dispositivos y nuevas necesidades.
+            </p>
           </article>
 
-          <article class="value-item">
-            <div class="value-icon">04</div>
+          <article class="gvi-value-card gvi-reveal">
+            <div class="gvi-value-card__icon">✓</div>
 
-            <div>
-              <h3>Escalabilidad tecnológica</h3>
-              <p>
-                Plataforma preparada para incorporar nuevos dispositivos,
-                sistemas y ubicaciones conforme evolucione la operación.
-              </p>
-            </div>
+            <h3>Estandarización</h3>
+
+            <p>
+              Procesos y herramientas orientados a una operación
+              consistente en entornos distribuidos.
+            </p>
           </article>
 
-        </div>
-
-        <div class="disclaimer">
-          <span aria-hidden="true">ⓘ</span>
-
-          <p>
-            <strong>Nota de confidencialidad:</strong>
-            la información presentada describe capacidades generales y
-            alcances públicos del proyecto. Por razones de seguridad y
-            confidencialidad, no se incluyen detalles de arquitectura,
-            configuraciones, procedimientos operativos ni información
-            sensible del cliente.
-          </p>
         </div>
 
       </div>
     </section>
 
+    <!-- Confidentiality notice -->
+    <section class="gvi-confidentiality">
+      <div class="gvi-container">
+
+        <div class="gvi-confidentiality__box gvi-reveal">
+
+          <div class="gvi-confidentiality__icon">
+            🔒
+          </div>
+
+          <div>
+            <h3>Información de carácter demostrativo</h3>
+
+            <p>
+              Esta demo presenta únicamente información general del
+              proyecto. Los detalles técnicos, configuraciones,
+              ubicaciones y procedimientos operativos permanecen
+              reservados por razones de seguridad y confidencialidad.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
     <!-- CTA -->
-    <section class="cta" id="contacto">
-      <div class="container cta-content">
+    <section class="gvi-cta" id="contacto">
+      <div class="gvi-container">
 
-        <div>
-          <span class="eyebrow" style="color: #FFFFFF;">
-            Infraestructura crítica
+        <div class="gvi-cta__content gvi-reveal">
+
+          <span class="gvi-eyebrow">
+            GVI Security Solutions
           </span>
 
           <h2>
-            Diseñamos plataformas de seguridad preparadas para operaciones
-            de gran escala
+            Integramos seguridad para infraestructuras críticas.
           </h2>
 
           <p>
-            Integramos sistemas, tecnología e ingeniería para convertir
-            información distribuida en una operación centralizada,
-            administrable y escalable.
+            Diseñamos, implementamos y mantenemos soluciones tecnológicas
+            adaptadas a operaciones de alta complejidad.
           </p>
-        </div>
 
-        <a
-          class="button button-light"
-          href="mailto:contacto@gviss.mx?subject=Solicitud%20de%20información%20-%20Integración%20de%20seguridad"
-        >
-          Solicitar información
-          <span aria-hidden="true">→</span>
-        </a>
+          <a
+            class="gvi-button"
+            href="https://gviss.com.mx/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conocer más
+            <span aria-hidden="true">→</span>
+          </a>
+
+        </div>
 
       </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
+  <footer class="gvi-footer">
+    <div class="gvi-container gvi-footer__inner">
 
-  <footer>
-    <div class="container footer-content">
-      <p>
-        <strong>GVI Security Solutions México</strong><br>
-        Integración de sistemas de seguridad y tecnología.
+      <img
+        class="gvi-footer__logo"
+        src="https://gviss.com.mx/wp-content/uploads/2023/01/Group-2.svg"
+        alt="GVI Security Solutions"
+      >
+
+      <p class="gvi-footer__copy">
+        © <span id="gvi-current-year"></span> GVI Security Solutions.<br>
+        Demo de caso de éxito.
       </p>
 
-      <p>
-        © <span id="current-year"></span> GVI Security Solutions.
-        Todos los derechos reservados.
-      </p>
     </div>
   </footer>
 
-
   <script>
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", function () {
+      const yearElement = document.getElementById("gvi-current-year");
+
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      const revealElements = document.querySelectorAll(".gvi-reveal");
+
+      if (
+        "IntersectionObserver" in window &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
+        const observer = new IntersectionObserver(
+          function (entries, currentObserver) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                currentObserver.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+        revealElements.forEach(function (element) {
+          observer.observe(element);
+        });
+      } else {
+        revealElements.forEach(function (element) {
+          element.classList.add("is-visible");
+        });
+      }
+    });
   </script>
 
 </body>
